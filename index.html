@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISAKI REIEN 三咲霊園 | 太陽が降り注ぐ、開放的な園内</title>
+    <meta name="description" content="千葉県船橋市の三咲霊園。日当たり良好で開放的な環境。樹木葬19万円〜、テラス墓所、ゆとり墓地、永代供養墓など豊富な区画をご用意。現地ご案内会好評開催中。">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        earth: {
+                            50: '#f7f8f5',
+                            100: '#edece4',
+                            200: '#dcd8c9',
+                            300: '#c5beaa',
+                            400: '#aa9e85',
+                            500: '#8c7d62',
+                            600: '#6f614b',
+                            700: '#564b3a',
+                            800: '#3e362a',
+                            900: '#28231c',
+                        },
+                        forest: {
+                            DEFAULT: '#2D5A27',
+                            dark: '#1C3B18',
+                            light: '#4A7C43',
+                            soft: '#EAF2E8'
+                        },
+                        terracotta: {
+                            DEFAULT: '#C05A3E',
+                            light: '#F7EDE8'
+                        },
+                        warmbg: '#FAF8F5'
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans JP', 'sans-serif'],
+                        serif: ['Noto Serif JP', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #FAF8F5;
+            color: #28231c;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Senior Friendly Text Zoom Class */
+        body.text-expanded {
+            font-size: 115%;
+        }
+        body.text-expanded h1 { font-size: 2.5rem !important; }
+        body.text-expanded h2 { font-size: 2.1rem !important; }
+        body.text-expanded p, body.text-expanded li, body.text-expanded span { font-size: 1.2rem !important; }
+
+        .serif-title {
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        /* Typing Effect Cursor Styling */
+        .typing-cursor::after {
+            content: '|';
+            display: inline-block;
+            margin-left: 2px;
+            color: #fde047;
+            animation: cursorBlink 0.8s infinite;
+        }
+        @keyframes cursorBlink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* Modern Sunshine Hero Gradient Overlay */
+        .hero-overlay {
+            background: linear-gradient(180deg, 
+                rgba(28, 59, 24, 0.45) 0%, 
+                rgba(40, 35, 28, 0.2) 40%, 
+                rgba(250, 248, 245, 0.95) 85%, 
+                rgba(250, 248, 245, 1) 100%);
+        }
+
+        /* Glassmorphism & Depth Cards */
+        .glass-card-premium {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(220, 216, 201, 0.8);
+            box-shadow: 0 20px 40px -15px rgba(40, 35, 28, 0.08);
+        }
+
+        .card-hover-effect {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 25px 50px -12px rgba(45, 90, 39, 0.18);
+        }
+
+        /* Light Ray Flare Effect */
+        .sunbeam {
+            position: absolute;
+            top: -100px;
+            right: -50px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(254, 240, 138, 0.35) 0%, rgba(255,255,255,0) 70%);
+            pointer-events: none;
+            animation: beamPulse 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes beamPulse {
+            0% { opacity: 0.6; transform: scale(0.95); }
+            100% { opacity: 1; transform: scale(1.1); }
+        }
+
+        /* Floating Badge */
+        .float-badge {
+            animation: float 5s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Image Lightbox Styling */
+        .img-zoom-trigger {
+            cursor: zoom-in;
+            transition: transform 0.5s ease;
+        }
+        .img-zoom-trigger:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="antialiased pb-24 md:pb-0 transition-all duration-300">
+
+    <!-- Top Utility Bar for Seniors -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm border-b border-earth-200">
+        <div class="max-w-6xl mx-auto px-4 py-2.5 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <a href="#" class="flex items-center space-x-2">
+                    <span class="bg-forest text-white text-[11px] font-bold px-2 py-0.5 rounded tracking-wider">千葉県船橋市</span>
+                    <img src="21.jpg" alt="三咲霊園 MISAKI REIEN" class="h-8 md:h-11 w-auto object-contain">
+                </a>
+            </div>
+
+            <div class="flex items-center space-x-3">
+                <!-- Text Size Switcher -->
+                <div class="flex items-center bg-earth-100 rounded-full p-1 border border-earth-300">
+                    <span class="text-xs text-earth-700 font-bold px-2 hidden sm:inline"><i class="fa-solid fa-font text-xs mr-1"></i>文字</span>
+                    <button id="btn-font-normal" onclick="setFontSize('normal')" class="px-3 py-1 text-xs font-bold rounded-full bg-white text-forest shadow-xs transition-all">標準</button>
+                    <button id="btn-font-large" onclick="setFontSize('large')" class="px-3 py-1 text-xs font-bold rounded-full text-earth-700 hover:text-forest transition-all">拡大</button>
+                </div>
+
+                <!-- Call Button -->
+                <a href="tel:0120080882" class="hidden md:flex items-center bg-terracotta hover:bg-opacity-90 text-white px-4 py-2 rounded-xl font-bold text-sm shadow-md transition-all transform hover:scale-105">
+                    <i class="fa-solid fa-phone mr-2"></i>0120-080882
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- NEW HIGH-IMPACT HERO SECTION -->
+    <section class="relative min-h-[85vh] sm:min-h-[85vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden bg-earth-900 pt-6 pb-12 sm:py-10">
+        <!-- Full-Width Ambient Background Layer -->
+        <div class="absolute inset-0 z-0">
+            <img src="14.jpg" alt="" class="w-full h-full object-cover filter blur-lg opacity-40 scale-110">
+            <div class="absolute inset-0 hero-overlay"></div>
+            <div class="sunbeam"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 pt-4 md:pt-8 pb-16 text-center space-y-5">
+            
+            <!-- Welcome QR Tag Badge -->
+            <div class="inline-block">
+                <span class="inline-flex items-center bg-white/90 backdrop-blur border border-yellow-300 text-forest font-bold text-xs md:text-sm px-4 py-1.5 rounded-full shadow-lg float-badge">
+                    <i class="fa-solid fa-qrcode mr-2 text-terracotta"></i> 折込チラシ・店頭ポスターよりお越しの皆さまへ
+                </span>
+            </div>
+
+            <!-- Borderless Full-Width Panoramic Showcase (Edge-to-Edge on Mobile) -->
+            <div class="relative -mx-4 sm:mx-auto max-w-5xl overflow-hidden my-3">
+                <img src="14.jpg" alt="三咲霊園 広大な全景パノラマ" class="w-full h-auto object-contain filter brightness-[1.05] contrast-[1.02] block">
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-earth-900/90 via-earth-900/40 to-transparent p-2.5 sm:p-4 text-center">
+                    <p class="text-white text-xs sm:text-sm font-bold tracking-wider drop-shadow-md">
+                        <i class="fa-solid fa-sun text-yellow-300 mr-1.5"></i> 14,769㎡の広大な敷地と太陽が注ぐ開放的な全景
+                    </p>
+                </div>
+            </div>
+
+            <!-- Catchphrase with Premium Typography & Typing Animation -->
+            <div class="space-y-4">
+                <p class="text-yellow-200 font-bold tracking-[0.2em] text-xs md:text-sm uppercase drop-shadow-md">
+                    MISAKI REIEN — 船橋市楠が山町275-1
+                </p>
+                
+                <h1 class="serif-title text-3xl sm:text-4xl md:text-6xl font-black text-white leading-tight drop-shadow-lg tracking-wide min-h-[2.4em] flex flex-col items-center justify-center">
+                    <span>太陽が降り注ぐ、開放的な園内</span>
+                    <span class="text-yellow-300 underline decoration-terracotta decoration-wavy underline-offset-8 inline-block mt-1 typing-cursor" id="typing-heading"></span>
+                </h1>
+
+                <div class="pt-2">
+                    <span class="inline-block bg-terracotta text-white font-bold text-sm md:text-lg px-6 py-2 rounded-full shadow-lg border border-white/30">
+                        樹木葬 新区画オープン！ 永代供養付きプレート墓
+                    </span>
+                </div>
+            </div>
+
+            <!-- Access Quick Banner overlaying Hero -->
+            <div class="pt-4 max-w-3xl mx-auto">
+                <div class="glass-card-premium rounded-2xl p-4 md:p-6 shadow-2xl border-2 border-white/60 text-left relative overflow-hidden">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                        <div class="space-y-1.5">
+                            <div class="flex items-center space-x-2">
+                                <span class="bg-forest text-white text-xs font-bold px-2.5 py-0.5 rounded">アクセス抜群</span>
+                                <span class="text-xs text-earth-600 font-bold">京成バス「三咲霊園バス停」より</span>
+                            </div>
+                            <p class="serif-title text-xl md:text-2xl font-bold text-forest">
+                                徒歩約 <span class="text-3xl text-terracotta font-black">1</span> 分！
+                                <span class="text-xs font-sans text-earth-700 bg-earth-100 px-2.5 py-1 rounded-md ml-1 inline-block">毎時3〜4本運行</span>
+                            </p>
+                            <p class="text-xs text-earth-700">
+                                京成三咲駅・船橋駅北口・小室駅・セコメディック病院方面から直通アクセス
+                            </p>
+                        </div>
+                        
+                        <!-- Hero Quick CTA -->
+                        <div class="w-full md:w-auto flex flex-col gap-2 shrink-0">
+                            <a href="#reservation" class="bg-forest hover:bg-forest-dark text-white font-bold text-sm py-3 px-6 rounded-xl shadow-md transition-all text-center flex items-center justify-center">
+                                <i class="fa-regular fa-calendar-check mr-2"></i> 見学予約（無料）
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 text-white/80 text-xs flex flex-col items-center space-y-1">
+            <span>プランを見る</span>
+            <i class="fa-solid fa-chevron-down animate-bounce text-sm text-yellow-300"></i>
+        </div>
+    </section>
+
+    <!-- EVENT BANNER & QUICK INFO SECTION -->
+    <section class="bg-gradient-to-b from-warmbg to-earth-50 py-8 border-b border-earth-200">
+        <div class="max-w-5xl mx-auto px-4">
+            
+            <div class="bg-white rounded-2xl p-6 shadow-md border border-earth-300 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                <div class="md:col-span-8 space-y-3">
+                    <div class="inline-flex items-center space-x-2 bg-terracotta/10 text-terracotta font-bold text-xs px-3 py-1 rounded-md">
+                        <i class="fa-solid fa-circle-dot text-xs"></i>
+                        <span>現地ご案内会 好評開催中</span>
+                    </div>
+                    <h3 class="serif-title text-xl md:text-2xl font-bold text-earth-900">
+                        受付時間：午前9時〜午後5時（木曜定休／雨天実施）
+                    </h3>
+                    <p class="text-xs md:text-sm text-earth-700 leading-relaxed">
+                        土・日・祝日は混雑する恐れがございます。ご案内は<strong class="text-terracotta underline">予約制</strong>とさせていただいておりますので、事前のお申込みをお勧めいたします。
+                    </p>
+                </div>
+                
+                <div class="md:col-span-4 space-y-2">
+                    <a href="tel:0120080882" class="w-full bg-terracotta hover:bg-red-700 text-white font-bold text-base py-3 px-4 rounded-xl shadow-md transition-all flex items-center justify-center">
+                        <i class="fa-solid fa-phone text-lg mr-2"></i> 0120-080882
+                    </a>
+                    <p class="text-[11px] text-center text-earth-600">お電話でその場で予約完了（通話無料）</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAMILY SHARE SECTION -->
+    <section class="bg-earth-100/80 border-b border-earth-200 py-5">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-earth-300 shadow-xs">
+                <div class="text-center sm:text-left">
+                    <p class="text-sm font-bold text-earth-900">
+                        <i class="fa-solid fa-users text-forest mr-1.5"></i> ご家族皆様でこのページをご共有いただけます
+                    </p>
+                    <p class="text-xs text-earth-600">スマホで簡単にLINEやSMSで共有可能です</p>
+                </div>
+
+                <div class="flex items-center gap-2 w-full sm:w-auto">
+                    <button onclick="shareLINE()" class="flex-1 sm:flex-none bg-[#06C755] hover:opacity-90 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow flex items-center justify-center transition-all">
+                        <i class="fa-brands fa-line text-lg mr-1.5"></i> LINE送る
+                    </button>
+                    <button onclick="shareSMS()" class="flex-1 sm:flex-none bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow flex items-center justify-center transition-all">
+                        <i class="fa-solid fa-comment-sms text-base mr-1.5"></i> SMS送る
+                    </button>
+                    <button onclick="copyURL()" class="bg-earth-200 hover:bg-earth-300 text-earth-800 font-bold text-xs px-3 py-2.5 rounded-xl flex items-center justify-center transition-all" title="URLコピー">
+                        <i class="fa-regular fa-copy text-sm"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE PLAN FINDER (GIMMICK) -->
+    <section class="py-12 bg-warmbg">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center space-y-2 mb-8">
+                <span class="text-forest font-bold text-xs tracking-widest uppercase bg-forest/10 px-3 py-1 rounded-full">SIMULATION</span>
+                <h2 class="serif-title text-2xl md:text-3xl font-bold text-earth-900">
+                    簡単3秒！ご家族にぴったりのお墓診断
+                </h2>
+                <p class="text-xs md:text-sm text-earth-700">条件を選択すると、該当するおすすめの区画プランが絞り込まれます</p>
+            </div>
+
+            <div class="glass-card-premium rounded-2xl p-6 shadow-md border border-earth-300 space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Condition 1 -->
+                    <div class="space-y-1.5">
+                        <label class="block text-xs font-bold text-earth-800">1. ご利用人数</label>
+                        <select id="sim-capacity" onchange="runSimulation()" class="w-full p-3 rounded-xl border border-earth-300 bg-earth-50 text-sm font-bold text-earth-900 focus:ring-2 focus:ring-forest outline-none">
+                            <option value="all">指定なし（すべてのプラン）</option>
+                            <option value="1">1名様（個人向け）</option>
+                            <option value="2">2名様（ご夫婦向け）</option>
+                            <option value="4">4名様〜（ファミリー向け）</option>
+                            <option value="family">代々継承（一般・ゆとり墓地）</option>
+                        </select>
+                    </div>
+
+                    <!-- Condition 2 -->
+                    <div class="space-y-1.5">
+                        <label class="block text-xs font-bold text-earth-800">2. ペット共葬</label>
+                        <select id="sim-pet" onchange="runSimulation()" class="w-full p-3 rounded-xl border border-earth-300 bg-earth-50 text-sm font-bold text-earth-900 focus:ring-2 focus:ring-forest outline-none">
+                            <option value="all">こだわりなし</option>
+                            <option value="yes">ペットと一緒に眠りたい</option>
+                        </select>
+                    </div>
+
+                    <!-- Condition 3 -->
+                    <div class="space-y-1.5">
+                        <label class="block text-xs font-bold text-earth-800">3. 後継者の有無</label>
+                        <select id="sim-successor" onchange="runSimulation()" class="w-full p-3 rounded-xl border border-earth-300 bg-earth-50 text-sm font-bold text-earth-900 focus:ring-2 focus:ring-forest outline-none">
+                            <option value="all">どちらでも可</option>
+                            <option value="eitai">永代供養付き（後継者不要）</option>
+                            <option value="general">受け継ぎたい（一般墓地）</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="sim-result-box" class="bg-forest-soft border border-forest/30 p-3.5 rounded-xl flex items-center justify-between text-forest text-xs md:text-sm">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-lightbulb text-yellow-600 text-lg"></i>
+                        <p class="font-bold">診断結果：<span id="sim-count-text">すべてのプランが表示されています</span></p>
+                    </div>
+                    <button onclick="resetSimulation()" class="text-xs text-earth-600 underline hover:text-earth-900 shrink-0">条件リセット</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN PRODUCTS SECTION: TREE BURIAL & TERRACE -->
+    <section id="plans-main" class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            
+            <div class="text-center space-y-3 mb-10">
+                <span class="bg-forest text-white font-bold text-xs px-3 py-1 rounded-full">人気・話題の区画</span>
+                <h2 class="serif-title text-2xl md:text-4xl font-bold text-earth-900">
+                    樹木葬・テラス墓所のご案内
+                </h2>
+                <p class="text-earth-700 text-xs md:text-sm max-w-2xl mx-auto">
+                    永代供養付き・後継者がいなくても安心。生前購入可能で改葬時の撤去費用も不要です。画像をタップすると拡大してご確認いただけます。
+                </p>
+            </div>
+
+            <!-- Header Image 40.jpg -->
+            <div class="max-w-4xl mx-auto mb-10 rounded-2xl overflow-hidden shadow-md border border-earth-300 bg-earth-50 p-2">
+                <img src="40.jpg" alt="樹木葬・テラス墓所 イメージ" 
+                     onclick="openLightbox('40.jpg', '樹木葬・テラス墓所')"
+                     onerror="this.src='40_2.jpg'"
+                     class="w-full h-auto object-contain rounded-xl img-zoom-trigger">
+            </div>
+
+            <!-- Modern Card Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- 1. 樹木葬 個人向け 1柱 (19万円) -->
+                <div class="plan-card glass-card-premium card-hover-effect rounded-2xl overflow-hidden flex flex-col justify-between border-t-4 border-forest"
+                     data-capacity="1" data-pet="no" data-type="eitai">
+                    <div class="p-5 space-y-4 flex-1">
+                        <div class="flex justify-between items-start">
+                            <span class="bg-forest/10 text-forest text-xs font-bold px-2.5 py-1 rounded">永代供養付き 樹木葬</span>
+                        </div>
+                        <h3 class="text-xl font-bold serif-title text-earth-900">個人向け 【1柱】</h3>
+
+                        <!-- Image with zoom trigger -->
+                        <div class="relative group rounded-xl overflow-hidden border border-earth-200 bg-earth-50">
+                            <img src="23.jpg" alt="樹木葬 個人向け 1柱 総額19万円" 
+                                 onclick="openLightbox('23.jpg', '樹木葬 個人向け 1柱')"
+                                 onerror="this.src='23_2.jpg'"
+                                 class="w-full h-auto object-contain img-zoom-trigger">
+                            <div class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded-full pointer-events-none flex items-center">
+                                <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> 拡大
+                            </div>
+                        </div>
+
+                        <ul class="text-xs space-y-2 text-earth-800">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-forest mr-2 font-bold"></i> 後継者がいなくても安心</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-forest mr-2 font-bold"></i> 生前購入可能</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-forest mr-2 font-bold"></i> 粉骨せずに納骨</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-forest mr-2 font-bold"></i> 改葬時の撤去費用不要</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-forest mr-2 font-bold"></i> 使用期間延長可能</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-5 bg-forest-soft/60 border-t border-earth-200 space-y-3">
+                        <div class="text-center">
+                            <p class="text-[11px] text-earth-600 font-bold">全て含んで（30年間使用料・管理料・石材・彫刻料込）</p>
+                            <p class="text-2xl font-black text-forest mt-0.5">
+                                総額 <span class="text-3xl text-terracotta">19</span> 万円<span class="text-xs font-normal text-earth-700">（税込）</span>
+                            </p>
+                        </div>
+                        <p class="text-[10px] text-earth-600 text-center">※納骨時に納骨費用として別途3万円</p>
+                        <a href="#reservation" class="block text-center bg-forest hover:bg-forest-dark text-white font-bold text-xs py-2.5 rounded-xl shadow transition-all">
+                            詳しく問い合わせる
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. 樹木葬 2柱 (36.3万円) -->
+                <div class="plan-card glass-card-premium card-hover-effect rounded-2xl overflow-hidden flex flex-col justify-between border-t-4 border-forest"
+                     data-capacity="2" data-pet="yes" data-type="eitai">
+                    <div class="p-5 space-y-4 flex-1">
+                        <div class="flex justify-between items-start">
+                            <span class="bg-forest/10 text-forest text-xs font-bold px-2.5 py-1 rounded">永代供養付き 樹木葬</span>
+                            <span class="bg-yellow-400 text-earth-900 text-[10px] font-extrabold px-2 py-0.5 rounded-full shadow-xs"><i class="fa-solid fa-paw mr-1"></i>ペットOK</span>
+                        </div>
+                        <h3 class="text-xl font-bold serif-title text-earth-900">ご夫婦向け 【2柱】</h3>
+
+                        <div class="relative group rounded-xl overflow-hidden border border-earth-200 bg-earth-50">
+                            <img src="24.jpg" alt="樹木葬 ご夫婦向け 2柱 総額36.3万円" 
+                                 onclick="openLightbox('24.jpg', '樹木葬 ご夫婦向け 2柱')"
+                                 onerror="this.src='24_2.jpg'"
+                                 class="w-full h-auto object-contain img-zoom-trigger">
+                            <div class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded-full pointer-events-none flex items-center">
+                                <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> 拡大
+                            </div>
+                        </div>
+
+                        <ul class="text-xs space-y-2 text-earth-800">
+                            <li class="flex items-center text-forest font-bold"><i class="fa-solid fa-paw mr-2"></i> ペットの納骨も可能</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-forest mr-2 font-bold"></i> 後継者がいなくても安心</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-forest mr-2 font-bold"></i> 骨壺のまま納骨可能</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-forest mr-2 font-bold"></i> 改葬時の撤去費用不要</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-forest mr-2 font-bold"></i> 使用期間延長可能</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-5 bg-forest-soft/60 border-t border-earth-200 space-y-3">
+                        <div class="text-center">
+                            <p class="text-[11px] text-earth-600 font-bold">全て含んで（30年間使用料・管理料・石材・彫刻料込）</p>
+                            <p class="text-2xl font-black text-forest mt-0.5">
+                                総額 <span class="text-3xl text-terracotta">36.3</span> 万円<span class="text-xs font-normal text-earth-700">（税込）</span>
+                            </p>
+                        </div>
+                        <p class="text-[10px] text-earth-600 text-center">※納骨時に納骨費用として別途3万円</p>
+                        <a href="#reservation" class="block text-center bg-forest hover:bg-forest-dark text-white font-bold text-xs py-2.5 rounded-xl shadow transition-all">
+                            詳しく問い合わせる
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. 樹木葬 4柱 (60.5万円) -->
+                <div class="plan-card glass-card-premium card-hover-effect rounded-2xl overflow-hidden flex flex-col justify-between border-t-4 border-forest"
+                     data-capacity="4" data-pet="yes" data-type="eitai">
+                    <div class="p-5 space-y-4 flex-1">
+                        <div class="flex justify-between items-start">
+                            <span class="bg-forest/10 text-forest text-xs font-bold px-2.5 py-1 rounded">永代供養付き 樹木葬</span>
+                            <span class="bg-yellow-400 text-earth-900 text-[10px] font-extrabold px-2 py-0.5 rounded-full shadow-xs"><i class="fa-solid fa-paw mr-1"></i>ペットOK</span>
+                        </div>
+                        <h3 class="text-xl font-bold serif-title text-earth-900">ファミリー向け 【4柱】</h3>
+
+                        <div class="relative group rounded-xl overflow-hidden border border-earth-200 bg-earth-50">
+                            <img src="25.jpg" alt="樹木葬 ファミリー向け 4柱 総額60.5万円" 
+                                 onclick="openLightbox('25.jpg', '樹木葬 ファミリー向け 4柱')"
+                                 onerror="this.src='25_2.jpg'"
+                                 class="w-full h-auto object-contain img-zoom-trigger">
+                            <div class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded-full pointer-events-none flex items-center">
+                                <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> 拡大
+                            </div>
+                        </div>
+
+                        <ul class="text-xs space-y-2 text-earth-800">
+                            <li class="flex items-center text-forest font-bold"><i class="fa-solid fa-paw mr-2"></i> ペットの納骨も可能</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-forest mr-2 font-bold"></i> 後継者がいなくても安心</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-forest mr-2 font-bold"></i> 骨壺のまま納骨可能</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-forest mr-2 font-bold"></i> 改葬時の撤去費用不要</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-forest mr-2 font-bold"></i> 使用期間延長可能</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-5 bg-forest-soft/60 border-t border-earth-200 space-y-3">
+                        <div class="text-center">
+                            <p class="text-[11px] text-earth-600 font-bold">全て含んで（30年間使用料・管理料・石材・彫刻料込）</p>
+                            <p class="text-2xl font-black text-forest mt-0.5">
+                                総額 <span class="text-3xl text-terracotta">60.5</span> 万円<span class="text-xs font-normal text-earth-700">（税込）</span>
+                            </p>
+                        </div>
+                        <p class="text-[10px] text-earth-600 text-center">※納骨時に納骨費用として別途3万円</p>
+                        <a href="#reservation" class="block text-center bg-forest hover:bg-forest-dark text-white font-bold text-xs py-2.5 rounded-xl shadow transition-all">
+                            詳しく問い合わせる
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. テラス墓所 4柱 (85.7万円) -->
+                <div class="plan-card glass-card-premium card-hover-effect rounded-2xl overflow-hidden flex flex-col justify-between border-t-4 border-terracotta"
+                     data-capacity="4" data-pet="yes" data-type="eitai">
+                    <div class="p-5 space-y-4 flex-1">
+                        <div class="flex justify-between items-start">
+                            <span class="bg-terracotta/10 text-terracotta text-xs font-bold px-2.5 py-1 rounded">永代供養付き テラス墓所</span>
+                            <span class="bg-yellow-400 text-earth-900 text-[10px] font-extrabold px-2 py-0.5 rounded-full shadow-xs"><i class="fa-solid fa-paw mr-1"></i>ペットOK</span>
+                        </div>
+                        <h3 class="text-xl font-bold serif-title text-earth-900">ファミリー向け 【4柱】</h3>
+
+                        <div class="relative group rounded-xl overflow-hidden border border-earth-200 bg-earth-50">
+                            <img src="27.jpg" alt="テラス墓所 ファミリー向け 4柱 総額85.7万円" 
+                                 onclick="openLightbox('27.jpg', 'テラス墓所 4柱')"
+                                 onerror="this.src='27_2.jpg'"
+                                 class="w-full h-auto object-contain img-zoom-trigger">
+                            <div class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded-full pointer-events-none flex items-center">
+                                <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> 拡大
+                            </div>
+                        </div>
+
+                        <ul class="text-xs space-y-2 text-earth-800">
+                            <li class="flex items-center text-terracotta font-bold"><i class="fa-solid fa-paw mr-2"></i> ペットの納骨も可能</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-terracotta mr-2 font-bold"></i> 後継者がいなくても安心</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-terracotta mr-2 font-bold"></i> 生前購入可能</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-terracotta mr-2 font-bold"></i> 骨壺のまま納骨可能</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-terracotta mr-2 font-bold"></i> 改葬時の撤去費用不要</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-5 bg-terracotta-light border-t border-earth-200 space-y-3">
+                        <div class="text-center">
+                            <p class="text-[11px] text-earth-600 font-bold">全て含んで（30年間使用料・管理料・石材・彫刻料込）</p>
+                            <p class="text-2xl font-black text-terracotta mt-0.5">
+                                総額 <span class="text-3xl">85.7</span> 万円<span class="text-xs font-normal text-earth-700">（税込）</span>
+                            </p>
+                        </div>
+                        <p class="text-[10px] text-earth-600 text-center">※納骨時に納骨費用として別途3万円</p>
+                        <a href="#reservation" class="block text-center bg-terracotta hover:bg-red-700 text-white font-bold text-xs py-2.5 rounded-xl shadow transition-all">
+                            詳しく問い合わせる
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TRADITIONAL GRAVE PLOTS -->
+    <section class="py-12 bg-earth-50 border-t border-earth-200">
+        <div class="max-w-6xl mx-auto px-4">
+            
+            <div class="text-center space-y-3 mb-10">
+                <span class="bg-earth-200 text-earth-800 font-bold text-xs px-3 py-1 rounded-full">ゆとりのある空間で代々受け継ぐ</span>
+                <h2 class="serif-title text-2xl md:text-4xl font-bold text-earth-900">
+                    一般墓地・ゆとり墓地のご案内
+                </h2>
+                <p class="text-earth-700 text-xs md:text-sm max-w-2xl mx-auto">
+                    広々とした1.5㎡区画。伝統的なお墓からデザイン性の高い最新区画まで、ご家族の想いに合わせた区画をご用意しております。
+                </p>
+            </div>
+
+            <!-- Traditional Plots Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- 1. ゆとり墓地 1.5㎡ -->
+                <div class="plan-card glass-card-premium card-hover-effect rounded-2xl overflow-hidden flex flex-col justify-between"
+                     data-capacity="family" data-pet="no" data-type="general">
+                    <div class="p-4 space-y-3 flex-1">
+                        <span class="bg-earth-200 text-earth-800 text-[11px] font-bold px-2 py-0.5 rounded">1.5㎡ 区画</span>
+                        <h3 class="text-lg font-bold serif-title text-earth-900">ゆとり墓地 1.5㎡</h3>
+                        
+                        <div class="relative rounded-xl overflow-hidden border border-earth-200 bg-white">
+                            <img src="28.jpg" alt="ゆとり墓地 1.5㎡ 総額146.8万円〜" 
+                                 onclick="openLightbox('28.jpg', 'ゆとり墓地 1.5㎡')"
+                                 onerror="this.src='28_2.jpg'"
+                                 class="w-full h-auto object-contain img-zoom-trigger">
+                        </div>
+                        <p class="text-xs text-earth-700 leading-relaxed">
+                            前後左右に空間があり隣とのゆとりがある区画（骨壺4〜5個収蔵）。
+                        </p>
+                    </div>
+                    <div class="p-4 bg-earth-100 border-t border-earth-200 text-center">
+                        <p class="text-xs text-earth-600">総額 <span class="text-xl font-bold text-earth-900">146.8</span> 万円〜</p>
+                        <a href="#reservation" class="mt-2 block bg-earth-800 hover:bg-earth-900 text-white font-bold text-xs py-2 rounded-lg transition-all">資料請求・問合せ</a>
+                    </div>
+                </div>
+
+                <!-- 2. 新ゆとり墓地 1.5㎡ -->
+                <div class="plan-card glass-card-premium card-hover-effect rounded-2xl overflow-hidden flex flex-col justify-between"
+                     data-capacity="family" data-pet="yes" data-type="general">
+                    <div class="p-4 space-y-3 flex-1">
+                        <div class="flex justify-between items-center">
+                            <span class="bg-forest/10 text-forest text-[11px] font-bold px-2 py-0.5 rounded">1.5㎡ 区画</span>
+                            <span class="bg-yellow-400 text-earth-900 text-[10px] font-bold px-1.5 py-0.5 rounded">ペット共葬OK</span>
+                        </div>
+                        <h3 class="text-lg font-bold serif-title text-earth-900">新ゆとり墓地 1.5㎡</h3>
+                        
+                        <div class="relative rounded-xl overflow-hidden border border-earth-200 bg-white">
+                            <img src="29.jpg" alt="新ゆとり墓地 1.5㎡ 総額152.9万円〜" 
+                                 onclick="openLightbox('29.jpg', '新ゆとり墓地 1.5㎡')"
+                                 onerror="this.src='29_2.jpg'"
+                                 class="w-full h-auto object-contain img-zoom-trigger">
+                        </div>
+                        <p class="text-xs text-earth-700 leading-relaxed">
+                            間口の広い区画で、ゆったりとした設計（骨壺8個収蔵）。
+                        </p>
+                    </div>
+                    <div class="p-4 bg-earth-100 border-t border-earth-200 text-center">
+                        <p class="text-xs text-earth-600">総額 <span class="text-xl font-bold text-earth-900">152.9</span> 万円〜</p>
+                        <a href="#reservation" class="mt-2 block bg-forest hover:bg-forest-dark text-white font-bold text-xs py-2 rounded-lg transition-all">資料請求・問合せ</a>
+                    </div>
+                </div>
+
+                <!-- 3. グリュック墓地 1.5㎡ -->
+                <div class="plan-card glass-card-premium card-hover-effect rounded-2xl overflow-hidden flex flex-col justify-between"
+                     data-capacity="family" data-pet="no" data-type="general">
+                    <div class="p-4 space-y-3 flex-1">
+                        <span class="bg-earth-200 text-earth-800 text-[11px] font-bold px-2 py-0.5 rounded">1.5㎡ 区画</span>
+                        <h3 class="text-lg font-bold serif-title text-earth-900">グリュック墓地 1.5㎡</h3>
+                        
+                        <div class="relative rounded-xl overflow-hidden border border-earth-200 bg-white">
+                            <img src="30.jpg" alt="グリュック墓地 1.5㎡ 総額148.5万円〜" 
+                                 onclick="openLightbox('30.jpg', 'グリュック墓地 1.5㎡')"
+                                 onerror="this.src='30_2.jpg'"
+                                 class="w-full h-auto object-contain img-zoom-trigger">
+                        </div>
+                        <p class="text-xs text-earth-700 leading-relaxed">
+                            ドイツのお墓をモチーフにした洋風デザイン（骨壺6個収蔵）。
+                        </p>
+                    </div>
+                    <div class="p-4 bg-earth-100 border-t border-earth-200 text-center">
+                        <p class="text-xs text-earth-600">総額 <span class="text-xl font-bold text-earth-900">148.5</span> 万円〜</p>
+                        <a href="#reservation" class="mt-2 block bg-earth-800 hover:bg-earth-900 text-white font-bold text-xs py-2 rounded-lg transition-all">資料請求・問合せ</a>
+                    </div>
+                </div>
+
+                <!-- 4. 一般墓地 1.5㎡ -->
+                <div class="plan-card glass-card-premium card-hover-effect rounded-2xl overflow-hidden flex flex-col justify-between"
+                     data-capacity="family" data-pet="no" data-type="general">
+                    <div class="p-4 space-y-3 flex-1">
+                        <span class="bg-earth-200 text-earth-800 text-[11px] font-bold px-2 py-0.5 rounded">1.5㎡ 区画</span>
+                        <h3 class="text-lg font-bold serif-title text-earth-900">一般墓地 1.5㎡</h3>
+                        
+                        <div class="relative rounded-xl overflow-hidden border border-earth-200 bg-white">
+                            <img src="31.jpg" alt="一般墓地 1.5㎡ 総額209万円〜" 
+                                 onclick="openLightbox('31.jpg', '一般墓地 1.5㎡')"
+                                 onerror="this.src='31_2.jpg'"
+                                 class="w-full h-auto object-contain img-zoom-trigger">
+                        </div>
+                        <p class="text-xs text-earth-700 leading-relaxed">
+                            正方形に近い区画で立派なお墓を建立可能（骨壺最大16個収蔵）。
+                        </p>
+                    </div>
+                    <div class="p-4 bg-earth-100 border-t border-earth-200 text-center">
+                        <p class="text-xs text-earth-600">総額 <span class="text-xl font-bold text-earth-900">209</span> 万円〜</p>
+                        <a href="#reservation" class="mt-2 block bg-earth-800 hover:bg-earth-900 text-white font-bold text-xs py-2 rounded-lg transition-all">資料請求・問合せ</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-8 bg-white p-4 rounded-xl border border-earth-300 text-center max-w-xl mx-auto shadow-xs">
+                <p class="text-xs font-bold text-earth-700">■ 三咲霊園 年間管理料（1.50㎡区画）</p>
+                <p class="text-lg font-black text-forest mt-0.5">年間 6,600円<span class="text-xs font-normal text-earth-600">（税込）</span></p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- JOINT GRAVE & ETERNAL MEMORIAL SECTION -->
+    <section class="py-12 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Joint Burial -->
+                <div class="glass-card-premium rounded-2xl p-6 border-l-4 border-forest shadow-md flex flex-col justify-between"
+                     data-capacity="1" data-pet="no" data-type="eitai">
+                    <div class="space-y-3">
+                        <span class="bg-forest text-white text-xs font-bold px-3 py-1 rounded-full">お手頃な永代供養</span>
+                        <h3 class="serif-title text-2xl font-bold text-earth-900">合葬墓 永代供養墓</h3>
+                        
+                        <div class="relative rounded-xl overflow-hidden border border-earth-200 bg-earth-50">
+                            <img src="10.jpg" alt="合葬墓 永代供養墓 外観" 
+                                 onclick="openLightbox('10.jpg', '合葬墓 永代供養墓')"
+                                 class="w-full h-auto object-contain img-zoom-trigger">
+                        </div>
+                        <p class="text-xs text-earth-700 leading-relaxed">
+                            単身の方や、費用を抑えて手厚く供養されたい方に適した合葬タイプの永代供養墓です。
+                        </p>
+                    </div>
+
+                    <div class="mt-4 pt-4 border-t border-earth-200 space-y-3">
+                        <div class="bg-forest-soft p-3 rounded-xl text-center">
+                            <p class="text-[11px] text-earth-600">1柱あたり</p>
+                            <p class="text-3xl font-black text-forest">5 <span class="text-base font-normal">万円（税込）</span></p>
+                        </div>
+                        <div class="text-xs text-earth-600 text-center">
+                            <p class="font-bold">合葬墓のお問合せ：徳風苑（三咲霊園内）</p>
+                            <a href="tel:0474023993" class="text-forest font-bold text-sm hover:underline"><i class="fa-solid fa-phone mr-1"></i>047-402-3993</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Eternal Memorial Guide -->
+                <div class="glass-card-premium rounded-2xl p-6 border-l-4 border-terracotta shadow-md flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <span class="bg-terracotta text-white text-xs font-bold px-3 py-1 rounded-full">将来もずっと安心</span>
+                        <h3 class="serif-title text-2xl font-bold text-earth-900">三咲霊園 永代供養墓のご案内</h3>
+                        
+                        <div class="relative rounded-xl overflow-hidden border border-earth-200 bg-earth-50">
+                            <img src="34.jpg" alt="将来も安心の永代供養墓 ご案内" 
+                                 onclick="openLightbox('34.jpg', '永代供養墓のご案内')"
+                                 onerror="this.src='34_2.jpg'"
+                                 class="w-full h-auto object-contain img-zoom-trigger">
+                        </div>
+                    </div>
+
+                    <div class="mt-4 pt-4 border-t border-earth-200">
+                        <a href="#reservation" class="block text-center bg-terracotta hover:bg-red-700 text-white font-bold text-sm py-3 rounded-xl shadow transition-all">
+                            永代供養について相談する
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PARK AMENITIES -->
+    <section class="py-12 bg-earth-50 border-t border-earth-200">
+        <div class="max-w-5xl mx-auto px-4 space-y-6">
+            
+            <div class="text-center space-y-2">
+                <span class="text-forest font-bold text-xs tracking-widest">SERVICE & COMFORT</span>
+                <h2 class="serif-title text-2xl md:text-3xl font-bold text-earth-900">
+                    お参りの際のご案内
+                </h2>
+                <p class="text-earth-700 text-xs md:text-sm">いつでも手ぶらで気軽にお参りに来られる環境と、ご家族でおくつろぎいただける施設をご用意しています</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                <!-- Service Info Image (35.jpg) -->
+                <div class="rounded-2xl overflow-hidden shadow-md border border-earth-300 bg-white p-3 flex flex-col justify-between space-y-2">
+                    <div class="relative rounded-xl overflow-hidden bg-earth-50 flex-1 flex items-center justify-center">
+                        <img src="35.jpg" alt="お参りの際にご利用ください 第1期管理棟・供花販売・コーヒー無料サービス" 
+                             onclick="openLightbox('35.jpg', '園内サービスのご案内')"
+                             onerror="this.src='35_2.jpg'"
+                             class="w-full h-auto object-contain rounded-xl img-zoom-trigger max-h-80">
+                        <div class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded-full pointer-events-none flex items-center">
+                            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> 拡大
+                        </div>
+                    </div>
+                    <p class="text-xs font-bold text-center text-earth-800 pt-1">
+                        <i class="fa-solid fa-mug-hot text-forest mr-1"></i> 供花販売・コーヒー無料サービス・休憩所
+                    </p>
+                </div>
+
+                <!-- Table Tennis Facility Image (41.jpg) -->
+                <div class="rounded-2xl overflow-hidden shadow-md border border-earth-300 bg-white p-3 flex flex-col justify-between space-y-2">
+                    <div class="relative rounded-xl overflow-hidden bg-earth-50 flex-1 flex items-center justify-center min-h-[220px]">
+                        <img src="41.jpg" alt="管理棟内の卓球スペース" 
+                             onclick="openLightbox('41.jpg', '管理棟内 卓球スペース')"
+                             onerror="this.src='https://placehold.co/600x400/3e362a/ffffff?text=%E5%8D%93%E7%90%83%E5%8F%B0'"
+                             class="w-full h-full object-cover rounded-xl img-zoom-trigger max-h-80">
+                        <div class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded-full pointer-events-none flex items-center">
+                            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> 拡大
+                        </div>
+                    </div>
+                    <p class="text-xs font-bold text-center text-earth-800 pt-1">
+                        <i class="fa-solid fa-table-tennis-paddle-ball text-forest mr-1"></i> 管理棟内 休憩・卓球スペース（ご自由にご利用いただけます）
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- KAISOU / RELOCATION SUPPORT -->
+    <section class="py-10 bg-forest-soft/70 border-y border-forest/20">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-forest/20">
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                    <div class="w-16 h-16 bg-forest text-white rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-md">
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                    </div>
+                    <div class="space-y-2 text-center md:text-left">
+                        <span class="bg-terracotta text-white text-xs font-bold px-2.5 py-0.5 rounded">お墓のお引っ越し</span>
+                        <h3 class="serif-title text-xl md:text-2xl font-bold text-earth-900">
+                            遠方にあるお墓の改葬（引越し）もサポート
+                        </h3>
+                        <p class="text-xs md:text-sm text-earth-700 leading-relaxed">
+                            「実家のお墓が遠くてお参りが大変」「お墓を近くにまとめたい」などのご要望にお応えします。行政手続きから解体撤去、新しい墓所への納骨まで親身にお手伝いいたします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACCESS & MAP & WEATHER SECTION -->
+    <section id="access" class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4 space-y-10">
+            
+            <div class="text-center space-y-2">
+                <span class="text-terracotta font-bold text-xs tracking-widest">LOCATION & MAP</span>
+                <h2 class="serif-title text-2xl md:text-4xl font-bold text-earth-900">
+                    交通アクセス・園内マップ
+                </h2>
+                <p class="text-earth-700 text-xs md:text-sm">ご来園の際は第2期区画の入口よりお越しください。</p>
+            </div>
+
+            <!-- New Section Image -->
+            <div class="rounded-2xl overflow-hidden shadow-lg border-2 border-forest/30 bg-earth-50 p-2">
+                <img src="33.jpg" alt="三咲霊園 新区画開放中！ご来園の際は三咲会館（第2期管理棟）へお越しください" 
+                     onclick="openLightbox('33.jpg', '新区画マップ')"
+                     onerror="this.src='33_2.jpg'"
+                     class="w-full h-auto object-contain rounded-xl img-zoom-trigger">
+            </div>
+
+            <!-- Access Information Image -->
+            <div class="max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-md border border-earth-300 bg-white p-2">
+                <img src="36.jpg" alt="お車をご利用の場合・電車バスをご利用の場合" 
+                     onclick="openLightbox('36.jpg', 'アクセス方法')"
+                     onerror="this.src='36_2.jpg'"
+                     class="w-full h-auto object-contain rounded-xl img-zoom-trigger">
+            </div>
+
+            <!-- Weather & Navigation Buttons Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Weather -->
+                <div class="bg-earth-50 rounded-2xl p-6 shadow-sm border border-earth-300 flex flex-col justify-between space-y-4">
+                    <div>
+                        <h3 class="text-base font-bold text-forest border-b border-earth-200 pb-2 flex items-center">
+                            <i class="fa-solid fa-cloud-sun text-amber-500 mr-2 text-lg"></i> お参り・ご見学日の天気予報
+                        </h3>
+                        <p class="text-xs text-earth-700 mt-2 leading-relaxed">
+                            日当たりの良い三咲霊園のご来園前に、船橋市三咲周辺のピンポイント天気をご確認いただけます。
+                        </p>
+                    </div>
+
+                    <a href="https://weathernews.jp/onebox/tenki/chiba/12204/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm px-5 py-3 rounded-xl shadow transition-all w-full text-center">
+                        <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i> 三咲のスポット天気予報（ウェザーニュース）
+                    </a>
+                </div>
+
+                <!-- Google Map Link Button -->
+                <div class="bg-earth-50 rounded-2xl p-6 shadow-sm border border-earth-300 flex flex-col justify-between space-y-4">
+                    <div>
+                        <h3 class="font-bold text-earth-900 text-base flex items-center border-b border-earth-200 pb-2">
+                            <i class="fa-solid fa-location-dot text-forest mr-2 text-lg"></i> スマホナビゲーション
+                        </h3>
+                        <p class="text-xs text-earth-700 mt-2">
+                            Googleマップアプリで今すぐ現在地からのルート案内を開始できます。
+                        </p>
+                    </div>
+
+                    <a href="https://maps.app.goo.gl/NyeRuuLY8VRhEHZh7" target="_blank" rel="noopener noreferrer" class="bg-forest hover:bg-forest-dark text-white font-bold text-sm md:text-base px-6 py-3.5 rounded-xl shadow inline-flex items-center justify-center transition-all text-center">
+                        <i class="fa-solid fa-diamond-turn-right mr-2 text-yellow-400 text-xl"></i> Googleマップでルート案内を開始
+                    </a>
+                </div>
+            </div>
+
+            <!-- Maps Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-earth-50 p-3 rounded-2xl shadow-sm border border-earth-300 space-y-2">
+                    <p class="text-center font-bold text-earth-900 text-xs">【現地案内図 (広域地図)】</p>
+                    <img src="37.jpg" alt="三咲霊園 現地案内図 広域" 
+                         onclick="openLightbox('37.jpg', '現地案内図 (広域地図)')"
+                         class="w-full h-auto object-contain rounded-xl img-zoom-trigger">
+                </div>
+                <div class="bg-earth-50 p-3 rounded-2xl shadow-sm border border-earth-300 space-y-2">
+                    <p class="text-center font-bold text-earth-900 text-xs">【周辺拡大図】</p>
+                    <img src="38.jpg" alt="三咲霊園 周辺拡大図" 
+                         onclick="openLightbox('38.jpg', '周辺拡大図')"
+                         class="w-full h-auto object-contain rounded-xl img-zoom-trigger">
+                </div>
+            </div>
+
+            <!-- Google Map Embed Container -->
+            <div class="bg-earth-50 p-4 rounded-2xl shadow-sm border border-earth-300 space-y-3">
+                <h3 class="font-bold text-earth-900 text-sm flex items-center">
+                    <i class="fa-solid fa-map text-forest mr-2"></i> 三咲霊園（第2期管理棟）マップ
+                </h3>
+                <div class="w-full h-80 rounded-xl overflow-hidden border border-earth-200">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d450.56672648015234!2d140.04412002861497!3d35.7567846905648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60227ffe7a4e0f41%3A0x11ca93da001b6cd1!2z5LiJ5ZKy6ZyK5ZyS56ys77yS5pyf566h55CG5qOfKOS4ieWSsuS8mumkqCk!5e1!3m2!1sja!2sjp!4v1785734489325!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="py-12 bg-earth-50 border-t border-earth-200">
+        <div class="max-w-4xl mx-auto px-4">
+            
+            <div class="text-center space-y-2 mb-8">
+                <span class="text-forest font-bold text-xs tracking-widest">Q & A</span>
+                <h2 class="serif-title text-2xl md:text-3xl font-bold text-earth-900">
+                    よくあるご質問
+                </h2>
+            </div>
+
+            <div class="space-y-3">
+                <div class="border border-earth-300 rounded-xl overflow-hidden bg-white shadow-xs">
+                    <button onclick="toggleFAQ(1)" class="w-full p-4 text-left font-bold text-earth-900 hover:bg-earth-50 flex items-center justify-between transition-all text-sm md:text-base">
+                        <span class="flex items-center"><span class="text-forest font-black mr-3">Q1.</span>後継者がいないのですが、購入できますか？</span>
+                        <i id="faq-icon-1" class="fa-solid fa-chevron-down text-earth-500 transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-1" class="hidden p-4 bg-earth-50/50 text-xs md:text-sm text-earth-800 leading-relaxed border-t border-earth-200">
+                        はい、ご安心ください。樹木葬・テラス墓所・永代供養墓など、後継者がいらっしゃらなくてもお申し込みいただける区画を多数揃えております。万が一無縁になった場合も、当社にて責任を持って永代供養墓へ移設し供養いたします。
+                    </div>
+                </div>
+
+                <div class="border border-earth-300 rounded-xl overflow-hidden bg-white shadow-xs">
+                    <button onclick="toggleFAQ(2)" class="w-full p-4 text-left font-bold text-earth-900 hover:bg-earth-50 flex items-center justify-between transition-all text-sm md:text-base">
+                        <span class="flex items-center"><span class="text-forest font-black mr-3">Q2.</span>ペットと一緒に眠れるお墓はありますか？</span>
+                        <i id="faq-icon-2" class="fa-solid fa-chevron-down text-earth-500 transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-2" class="hidden p-4 bg-earth-50/50 text-xs md:text-sm text-earth-800 leading-relaxed border-t border-earth-200">
+                        はい。樹木葬（2柱・4柱）、テラス墓所、新ゆとり墓地は、大切なペットも一緒に納骨いただけます。
+                    </div>
+                </div>
+
+                <div class="border border-earth-300 rounded-xl overflow-hidden bg-white shadow-xs">
+                    <button onclick="toggleFAQ(3)" class="w-full p-4 text-left font-bold text-earth-900 hover:bg-earth-50 flex items-center justify-between transition-all text-sm md:text-base">
+                        <span class="flex items-center"><span class="text-forest font-black mr-3">Q3.</span>見学の予約や雨の日の案内はできますか？</span>
+                        <i id="faq-icon-3" class="fa-solid fa-chevron-down text-earth-500 transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-3" class="hidden p-4 bg-earth-50/50 text-xs md:text-sm text-earth-800 leading-relaxed border-t border-earth-200">
+                        現地ご案内会は午前9時〜午後5時（木曜定休）で開催しております。雨天でも実施しております。土日祝日は混雑が予想されますので事前のご予約をおすすめしております。
+                    </div>
+                </div>
+
+                <div class="border border-earth-300 rounded-xl overflow-hidden bg-white shadow-xs">
+                    <button onclick="toggleFAQ(4)" class="w-full p-4 text-left font-bold text-earth-900 hover:bg-earth-50 flex items-center justify-between transition-all text-sm md:text-base">
+                        <span class="flex items-center"><span class="text-forest font-black mr-3">Q4.</span>生前にお墓を購入することは可能ですか？</span>
+                        <i id="faq-icon-4" class="fa-solid fa-chevron-down text-earth-500 transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-4" class="hidden p-4 bg-earth-50/50 text-xs md:text-sm text-earth-800 leading-relaxed border-t border-earth-200">
+                        もちろん可能です。近年はご自身の生前に納得のいく墓所をお選びになる方が増えております。
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section id="reservation" class="py-12 bg-white border-t border-earth-200">
+        <div class="max-w-3xl mx-auto px-4">
+            
+            <div class="glass-card-premium rounded-3xl p-6 md:p-10 shadow-xl border border-earth-300 space-y-6">
+                <div class="text-center space-y-2">
+                    <span class="bg-forest text-white text-xs font-bold px-3 py-1 rounded-full">お気軽にご相談ください</span>
+                    <h2 class="serif-title text-2xl md:text-3xl font-bold text-earth-900">
+                        現地ご見学予約・資料請求フォーム
+                    </h2>
+                    <p class="text-xs text-earth-700">下記フォームより必要事項をご入力の上、送信してください。</p>
+                </div>
+
+                <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-earth-800 mb-1">お問合せ種別 <span class="text-terracotta">*</span></label>
+                        <div class="grid grid-cols-2 gap-2 text-xs md:text-sm">
+                            <label class="bg-earth-50 p-3 rounded-xl border border-earth-300 flex items-center cursor-pointer hover:bg-forest-soft">
+                                <input type="radio" name="type" value="visit" checked class="mr-2 accent-forest"> 現地見学予約
+                            </label>
+                            <label class="bg-earth-50 p-3 rounded-xl border border-earth-300 flex items-center cursor-pointer hover:bg-forest-soft">
+                                <input type="radio" name="type" value="document" class="mr-2 accent-forest"> 資料請求・相談
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-earth-800 mb-1">ご希望日時（見学希望の方）</label>
+                        <input type="date" class="w-full p-3 rounded-xl border border-earth-300 bg-earth-50 text-sm focus:ring-2 focus:ring-forest outline-none">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-earth-800 mb-1">お名前 <span class="text-terracotta">*</span></label>
+                        <input type="text" required placeholder="例：山田 太郎" class="w-full p-3 rounded-xl border border-earth-300 bg-earth-50 text-sm focus:ring-2 focus:ring-forest outline-none">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-earth-800 mb-1">お電話番号 <span class="text-terracotta">*</span></label>
+                        <input type="tel" required placeholder="例：090-1234-5678" class="w-full p-3 rounded-xl border border-earth-300 bg-earth-50 text-sm focus:ring-2 focus:ring-forest outline-none">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-earth-800 mb-1">ご検討中の墓所プラン</label>
+                        <select class="w-full p-3 rounded-xl border border-earth-300 bg-earth-50 text-sm focus:ring-2 focus:ring-forest outline-none">
+                            <option value="">選択してください（未定でも可）</option>
+                            <option value="jumoku-1">樹木葬 個人向け 1柱（19万円）</option>
+                            <option value="jumoku-2">樹木葬 ご夫婦向け 2柱（36.3万円）</option>
+                            <option value="jumoku-4">樹木葬 ファミリー向け 4柱（60.5万円）</option>
+                            <option value="terrace">テラス墓所 4柱（85.7万円）</option>
+                            <option value="yutori">ゆとり墓地 1.5㎡</option>
+                            <option value="shinyutori">新ゆとり墓地 1.5㎡（ペットOK）</option>
+                            <option value="gluck">グリュック墓地 1.5㎡</option>
+                            <option value="ippan">一般墓地 1.5㎡</option>
+                            <option value="gassou">合葬墓・永代供養墓</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-earth-800 mb-1">ご質問・ご要望欄</label>
+                        <textarea rows="3" placeholder="ご質問やご希望の連絡時間帯などをご記入ください" class="w-full p-3 rounded-xl border border-earth-300 bg-earth-50 text-sm focus:ring-2 focus:ring-forest outline-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-forest hover:bg-forest-dark text-white font-bold text-base py-4 rounded-xl shadow-lg transition-all">
+                        <i class="fa-regular fa-paper-plane mr-2"></i> 送信する
+                    </button>
+                </form>
+
+                <div class="pt-4 border-t border-earth-200 text-center space-y-2">
+                    <p class="text-xs font-bold text-earth-700">お電話でのご予約・お問合せ（通話無料）</p>
+                    <a href="tel:0120080882" class="inline-block bg-terracotta text-white font-black text-2xl px-6 py-3 rounded-2xl shadow hover:bg-red-700 transition-all">
+                        <i class="fa-solid fa-phone mr-2"></i>0120-080882
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-earth-900 text-earth-100 py-12 border-t-4 border-forest">
+        <div class="max-w-5xl mx-auto px-4 space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-xs md:text-sm">
+                <div class="space-y-2 text-earth-300">
+                    <h3 class="serif-title text-lg font-bold text-white border-b border-earth-700 pb-2">三咲霊園 概要</h3>
+                    <p>■ 所在地：千葉県船橋市楠が山町275-1</p>
+                    <p>■ 総面積：14,769㎡</p>
+                    <p>■ 経営主体：宗教法人 阿弥陀寺</p>
+                    <p>■ 総区画数：2,938区画（内永代供養墓1基）</p>
+                    <p>■ 設備：管理事務所、休憩室、水道、トイレ、手桶棚、駐車場 他</p>
+                    <p>■ 許可番号：1期（第23-1号）・2期（第30-1号）</p>
+                </div>
+
+                <!-- Ishikazu Sekizai Section -->
+                <div class="space-y-3 text-earth-300">
+                    <h3 class="serif-title text-lg font-bold text-white border-b border-earth-700 pb-2">販売・施工管理会社</h3>
+                    
+                    <!-- Company Photo -->
+                    <div class="rounded-xl overflow-hidden border border-earth-700 my-2 bg-earth-800 group relative">
+                        <img src="R.jpg" alt="株式会社 石和石材 本社外観" 
+                             onclick="openLightbox('R.jpg', '株式会社 石和石材 本社外観')"
+                             onerror="this.src='https://placehold.co/600x400/3e362a/ffffff?text=%E7%9F%B3%E5%92%8C%E7%9F%B3%E6%9D%90+%E6%9C%AC%E7%A4%BE'"
+                             class="w-full h-56 md:h-64 object-cover object-top img-zoom-trigger group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded-full pointer-events-none flex items-center">
+                            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> 拡大
+                        </div>
+                    </div>
+
+                    <p class="text-base font-bold text-white">株式会社 石和石材（いしかずせきざい）</p>
+                    <p>フリーダイヤル：0120-080882（通話無料） / TEL：047-438-5330</p>
+                    <p>建設業者登録：石工事業 千葉県知事許可（般-27）第24433号</p>
+                    <p>本社：千葉県船橋市馬込町1193（船橋市営馬込霊園前）</p>
+                    
+                    <div class="pt-1">
+                        <a href="https://www.ishi-kazu.co.jp/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-yellow-300 hover:text-yellow-200 font-bold underline transition-colors">
+                            <i class="fa-solid fa-globe mr-1.5"></i> 石和石材 公式ホームページはこちら
+                            <i class="fa-solid fa-arrow-up-right-from-square ml-1.5 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-earth-800 text-center text-xs text-earth-400">
+                &copy; MISAKI REIEN / ISHIKAZU SEKIZAI All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- MOBILE STICKY BOTTOM BAR -->
+    <div class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur border-t border-earth-300 p-2 md:hidden shadow-2xl">
+        <div class="grid grid-cols-3 gap-2 text-center">
+            <a href="tel:0120080882" class="bg-terracotta text-white py-2.5 rounded-xl font-bold text-xs flex flex-col items-center justify-center shadow">
+                <i class="fa-solid fa-phone text-base mb-0.5"></i>
+                電話予約
+            </a>
+
+            <a href="#reservation" class="bg-forest text-white py-2.5 rounded-xl font-bold text-xs flex flex-col items-center justify-center shadow">
+                <i class="fa-regular fa-calendar-check text-base mb-0.5"></i>
+                見学予約
+            </a>
+
+            <button onclick="shareLINE()" class="bg-[#06C755] text-white py-2.5 rounded-xl font-bold text-xs flex flex-col items-center justify-center shadow">
+                <i class="fa-brands fa-line text-lg mb-0.5"></i>
+                家族に送る
+            </button>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX MODAL FOR IMAGES -->
+    <div id="lightbox" onclick="closeLightbox()" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4 cursor-zoom-out backdrop-blur-sm transition-all duration-300">
+        <div class="relative max-w-4xl max-h-[90vh] w-full flex flex-col items-center">
+            <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white text-2xl font-bold hover:text-yellow-400">
+                <i class="fa-solid fa-xmark"></i> 閉じる
+            </button>
+            <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl">
+            <p id="lightbox-caption" class="text-white text-sm font-bold mt-3 text-center"></p>
+        </div>
+    </div>
+
+    <!-- TOAST MODAL -->
+    <div id="toast" class="fixed top-20 left-1/2 transform -translate-x-1/2 bg-earth-900 text-white text-xs md:text-sm px-6 py-3 rounded-full shadow-2xl z-50 opacity-0 pointer-events-none transition-all duration-300">
+        <span id="toast-message">メッセージ</span>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        /* Typing Effect for Hero Catchphrase */
+        document.addEventListener('DOMContentLoaded', function() {
+            const headingText = "お参りに行くのが楽しみになります";
+            const target = document.getElementById('typing-heading');
+            let index = 0;
+            const typingSpeed = 110; // Typing speed per character (ms)
+
+            function typeText() {
+                if (index < headingText.length) {
+                    target.textContent += headingText.charAt(index);
+                    index++;
+                    setTimeout(typeText, typingSpeed);
+                }
+            }
+
+            // Start typing after initial load delay
+            setTimeout(typeText, 400);
+        });
+
+        /* Ambient Flying Birds Canvas Animation */
+        (function initBirds() {
+            const canvas = document.createElement('canvas');
+            canvas.id = 'ambient-birds';
+            canvas.style.position = 'fixed';
+            canvas.style.top = '0';
+            canvas.style.left = '0';
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+            canvas.style.pointerEvents = 'none';
+            canvas.style.zIndex = '30';
+            canvas.style.opacity = '0.9';
+            document.body.appendChild(canvas);
+
+            const ctx = canvas.getContext('2d');
+            let w, h;
+
+            function resize() {
+                w = canvas.width = window.innerWidth;
+                h = canvas.height = window.innerHeight;
+            }
+            window.addEventListener('resize', resize);
+            resize();
+
+            class Bird {
+                constructor() {
+                    this.reset(true);
+                }
+                reset(initial = false) {
+                    this.x = initial ? Math.random() * w : -60;
+                    this.y = Math.random() * (h * 0.55);
+                    this.speed = 0.9 + Math.random() * 1.1;
+                    this.wingSpeed = 0.09 + Math.random() * 0.06;
+                    this.wingAngle = Math.random() * Math.PI * 2;
+                    this.size = 12 + Math.random() * 10;
+                    this.angle = -0.03 + Math.random() * 0.06;
+                    this.color = Math.random() > 0.3 ? 'rgba(255, 255, 255, 0.92)' : 'rgba(254, 240, 138, 0.92)';
+                }
+                update() {
+                    this.x += Math.cos(this.angle) * this.speed;
+                    this.y += Math.sin(this.angle) * this.speed;
+                    this.wingAngle += this.wingSpeed;
+
+                    if (this.x > w + 60 || this.y < -50 || this.y > h) {
+                        this.reset();
+                    }
+                }
+                draw() {
+                    ctx.save();
+                    ctx.translate(this.x, this.y);
+                    ctx.rotate(this.angle);
+
+                    const wingY = Math.sin(this.wingAngle) * (this.size * 0.5);
+
+                    ctx.beginPath();
+                    ctx.moveTo(-this.size, wingY);
+                    ctx.quadraticCurveTo(-this.size * 0.3, -this.size * 0.25, 0, 0);
+                    ctx.quadraticCurveTo(this.size * 0.3, -this.size * 0.25, this.size, wingY);
+                    ctx.quadraticCurveTo(0, this.size * 0.1, -this.size, wingY);
+
+                    ctx.fillStyle = this.color;
+                    ctx.shadowColor = 'rgba(0, 0, 0, 0.3)';
+                    ctx.shadowBlur = 4;
+                    ctx.fill();
+                    ctx.restore();
+                }
+            }
+
+            const birds = Array.from({ length: 8 }, () => new Bird());
+
+            function animate() {
+                ctx.clearRect(0, 0, w, h);
+                birds.forEach(b => {
+                    b.update();
+                    b.draw();
+                });
+                requestAnimationFrame(animate);
+            }
+            animate();
+        })();
+
+        /* UI Utilities */
+        function setFontSize(size) {
+            const body = document.body;
+            const btnNormal = document.getElementById('btn-font-normal');
+            const btnLarge = document.getElementById('btn-font-large');
+
+            if (size === 'large') {
+                body.classList.add('text-expanded');
+                btnLarge.classList.add('bg-white', 'text-forest', 'shadow-xs');
+                btnLarge.classList.remove('text-earth-700');
+                btnNormal.classList.remove('bg-white', 'text-forest', 'shadow-xs');
+                btnNormal.classList.add('text-earth-700');
+                showToast('文字サイズを「拡大」に変更しました');
+            } else {
+                body.classList.remove('text-expanded');
+                btnNormal.classList.add('bg-white', 'text-forest', 'shadow-xs');
+                btnNormal.classList.remove('text-earth-700');
+                btnLarge.classList.remove('bg-white', 'text-forest', 'shadow-xs');
+                btnLarge.classList.add('text-earth-700');
+                showToast('文字サイズを「標準」に変更しました');
+            }
+        }
+
+        function shareLINE() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('【三咲霊園】太陽が降り注ぐ開放的な霊園のご案内（樹木葬・テラス墓所・ゆとり墓地）');
+            window.open(`https://line.me/R/msg/text/?${text}%20${url}`, '_blank');
+        }
+
+        function shareSMS() {
+            const url = window.location.href;
+            const text = `三咲霊園のご案内: ${url}`;
+            window.open(`sms:?body=${encodeURIComponent(text)}`);
+        }
+
+        function copyURL() {
+            const dummy = document.createElement('input');
+            document.body.appendChild(dummy);
+            dummy.value = window.location.href;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+            showToast('URLをコピーしました！LINEやSMSで送信できます');
+        }
+
+        function runSimulation() {
+            const cap = document.getElementById('sim-capacity').value;
+            const pet = document.getElementById('sim-pet').value;
+            const succ = document.getElementById('sim-successor').value;
+
+            const cards = document.querySelectorAll('.plan-card');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const cCap = card.getAttribute('data-capacity');
+                const cPet = card.getAttribute('data-pet');
+                const cType = card.getAttribute('data-type');
+
+                let matchCap = (cap === 'all' || cCap === cap);
+                let matchPet = (pet === 'all' || cPet === pet);
+                let matchSucc = (succ === 'all' || cType === succ);
+
+                if (matchCap && matchPet && matchSucc) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            document.getElementById('sim-count-text').innerText = `条件に該当するプラン (${visibleCount} 件)`;
+        }
+
+        function resetSimulation() {
+            document.getElementById('sim-capacity').value = 'all';
+            document.getElementById('sim-pet').value = 'all';
+            document.getElementById('sim-successor').value = 'all';
+            runSimulation();
+        }
+
+        function toggleFAQ(num) {
+            const ans = document.getElementById(`faq-ans-${num}`);
+            const icon = document.getElementById(`faq-icon-${num}`);
+
+            if (ans.classList.contains('hidden')) {
+                ans.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                ans.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        /* LIGHTBOX FUNCTION */
+        function openLightbox(src, caption) {
+            const modal = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const cap = document.getElementById('lightbox-caption');
+
+            img.src = src;
+            cap.innerText = caption;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            showToast('お問合せありがとうございました。担当者より迅速にご連絡いたします。');
+            document.getElementById('contactForm').reset();
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            toastMsg.innerText = msg;
+            toast.classList.remove('opacity-0', 'pointer-events-none');
+            toast.classList.add('opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('opacity-100');
+                toast.classList.add('opacity-0', 'pointer-events-none');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
